@@ -41,3 +41,6 @@ group :development, :test do
 end
 
 gem 'devise'
+
+# Skip Heroku injection
+gem 'rails_12factor'

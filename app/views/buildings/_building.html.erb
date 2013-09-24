@@ -1,0 +1,4 @@
+<%= link_to(building.name, building_path(building.id)) %>
+<%= button_to 'Delete', building_delete_path(building.id) %>
+<%= link_to 'Edit', building_edit_path(building.id) %>
+<%= link_to 'Home', building_home_path %>

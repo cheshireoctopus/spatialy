@@ -1,0 +1,19 @@
+<form method='post' action='<%= city_path(@city.id) %>'>
+    Name:
+    <input type='text' name='city[name]' value='<%= @city.name %>' autofocus>
+    <br>
+    State:
+    <input type='text' name='city[state]' value='<%= @city.state %>' >
+    <br>
+    Country:
+    <input type='text' name='city[country]' value='<%= @city.country %>' >
+    <br>
+    Y-Coordinate:
+    <input type='text' name='city[y_coord]' value='<%= @city.y_coord %>' >
+    <br>
+    X-Coordinate:
+    <input type='text' name='city[x_coord]' value='<%= @city.x_coord %>' >
+    <br>
+    <button>Update City</button>
+
+</form>

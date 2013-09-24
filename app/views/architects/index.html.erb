@@ -1,0 +1,8 @@
+<%= link_to 'Home', home_path %>
+<%= link_to 'Create Architect', architect_new_path %>
+
+<% @architects.each do |architect| %>
+<h3>Name: <%= link_to(architect.first_name, architect_path(architect.id)) %></h3>
+<%= button_to 'Delete', architect_delete_path(architect.id) %>
+<%= link_to 'Edit', architect_edit_path(architect.id) %>
+<% end %>

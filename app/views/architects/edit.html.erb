@@ -1,0 +1,12 @@
+<form method='post' action='<%= architect_path(@architect.id) %>'>
+  First Name:
+  <input type='text' name='architect[first_name]' value="<%= @architect.first_name %>" autofocus>
+  <br>
+  Middle Name:
+  <input type='text' name='architect[mid_name]' value="<%= @architect.mid_name %>">
+  <br>
+  Last Name:
+  <input type='text' name='architect[last_name]' value="<%= @architect.last_name %>">
+  <br>
+  <button>Update Architect</button>
+</form>

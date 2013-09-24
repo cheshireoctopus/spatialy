@@ -1,0 +1,8 @@
+<%= link_to 'Home', home_path %>
+<%= link_to 'Create City', city_new_path %>
+
+<% @cities.each do |city| %>
+<h3>Name: <%= link_to(city.name, city_path(city.id)) %></h3>
+<%= button_to 'Delete', city_delete_path(city.id) %>
+<%= link_to 'Edit', city_edit_path(city.id) %>
+<% end %>

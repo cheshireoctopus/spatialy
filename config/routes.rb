@@ -1,58 +1,69 @@
 Spatialy::Application.routes.draw do
-  # The priority is based upon order of creation:
-  # first created -> highest priority.
 
-  # Sample of regular route:
-  #   match 'products/:id' => 'catalog#view'
-  # Keep in mind you can assign values other than :controller and :action
+  devise_for :users
 
-  # Sample of named route:
-  #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
-  # This route can be invoked with purchase_url(:id => product.id)
+  root :to => 'home#index', :as => 'home'
 
-  # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+  #######################
+  ### ARCHITECT ROUTES ###
+  #######################
 
-  # Sample resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
+  get '/architects/:id/edit' => 'architects#edit', :as => 'architect_edit'
+  get '/architects/new' => 'architects#new', :as => 'architect_new'
+  get 'architects/:id' => 'architects#show', :as => 'architect'
+  post '/architects/:id/delete' => 'architects#destroy', :as => 'architect_delete'
+  post 'architects/:id' => 'architects#update'
+  get '/architects/' => 'architects#index', :as => 'architect_home'
 
-  # Sample resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
+  resources :architects
+  # get /architects             architects#index
+  # post /architects              architects#create
+  # get /architects/new          architects#new
+  # get /architects/:id/edit     architects#edit
+  # get /architects/:id          architects#show
+  # put /architects/:id          architects#update
+  # post /architects/:id          architects#destroy
 
-  # Sample resource route with more complex sub-resources
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', :on => :collection
-  #     end
-  #   end
+  #####################
+  ### BUILDING ROUTES ###
+  #####################
 
-  # Sample resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
+  get '/buildings/:id/edit' => 'buildings#edit', :as => 'building_edit'
+  get '/buildings/new' => 'buildings#new', :as => 'building_new'
+  get 'buildings/:id' => 'buildings#show', :as => 'building'
+  post '/buildings/:id/delete' => 'buildings#destroy', :as => 'building_delete'
+  post 'buildings/:id' => 'buildings#update'
+  get '/buildings/' => 'buildings#index', :as => 'building_home'
 
-  # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  resources :buildings
+  # get /buildings             buildings#index
+  # post /buildings              buildings#create
+  # get /buildings/new          buildings#new
+  # get /buildings/:id/edit     buildings#edit
+  # get /buildings/:id          buildings#show
+  # put /buildings/:id          buildings#update
+  # post /buildings/:id          buildings#destroy
 
-  # See how all your routes lay out with "rake routes"
 
-  # This is a legacy wild controller route that's not recommended for RESTful applications.
-  # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
+
+  #################
+  ### CITY ROUTES ###
+  #################
+
+  get '/cities/:id/edit' => 'cities#edit', :as => 'city_edit'
+  get '/cities/new' => 'cities#new', :as => 'city_new'
+  get 'cities/:id' => 'cities#show', :as => 'city'
+  post '/cities/:id/delete' => 'cities#destroy', :as => 'city_delete'
+  post 'cities/:id' => 'cities#update'
+  get '/cities/' => 'cities#index', :as => 'city_home'
+
+    resources :cities
+  # get /cities             cities#index
+  # post /cities              cities#create
+  # get /cities/new          cities#new
+  # get /cities/:id/edit     cities#edit
+  # get /cities/:id          cities#show
+  # put /cities/:id          cities#update
+  # post /cities/:id          cities#destroy
+
 end

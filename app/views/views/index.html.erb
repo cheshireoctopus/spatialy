@@ -1,3 +1,52 @@
-<%= link_to "Cities", city_home_path %>
-<%= link_to "Buildings", building_home_path %>
-<%= link_to "Architects", architect_home_path %>
+<nav id="topNav">
+      <ul>
+          <li><a href="#" title="Nav_Cities">Cities</a>
+              <ul>
+                  <%= @cities.each do |city| %>
+                  <li><a href="#">- <%= city.name %></a></li>
+                  <% end %>
+              </ul>
+          </li>
+          <li><a href="#" title="Nav_Buildings">Buildings</a>
+              <ul>
+                  <%= @buildings.each do |building| %>
+                  <li><a href="#">- <%= building.name %></a></li>
+                  <% end %>
+              </ul>
+          </li>
+          <li><a href="#" title="Nav_Architects">Architects</a>
+              <ul>
+                  <% @architects.each do |architect| %>
+                  <li><a href="#">- <%= architect.name %></a></li>
+                  <% end %>
+              </ul>
+          </li>
+      </ul>
+</nav>
+
+<script>
+      (function($){
+
+        //cache nav
+        var nav = $("#topNav");
+
+        //add indicator and hovers to submenu parents
+        nav.find("li").each(function() {
+          if ($(this).find("ul").length > 0) {
+            $("<span>").text("^").appendTo($(this).children(":first"));
+
+            //show subnav on hover
+            $(this).mouseenter(function() {
+              $(this).find("ul").stop(true, true).slideDown();
+            });
+
+            //hide submenus on exit
+            $(this).mouseleave(function() {
+              $(this).find("ul").stop(true, true).slideUp();
+            });
+          }
+        });
+      })(jQuery);
+</script>
+
+<div id="map"></map>

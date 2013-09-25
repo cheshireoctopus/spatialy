@@ -2,7 +2,7 @@ Spatialy::Application.routes.draw do
 
   devise_for :users
 
-  root :to => 'home#index', :as => 'home'
+  root :to => 'views#index', :as => 'home'
 
   #######################
   ### ARCHITECT ROUTES ###

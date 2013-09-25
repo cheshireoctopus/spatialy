@@ -13,3 +13,77 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+
+(function() {
+  window.onload = function () {
+
+    var options = {
+      zoom: 3,
+      center: new google.maps.LatLng(-74.0059, 40.7127),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    var map = new google.maps.Map(document.getElementById('map'), options);
+
+    // Create a LatLngBounds object
+    var bounds = new google.maps.LatLngBounds();
+
+    //Create Array for Cities
+    var places = [];
+
+    //Push Values to Array 'Cities'
+    places.push(new google.maps.LatLng(y_pos, x_pos));
+    places.push(new google.maps.LatLng(42, -76.02));
+    places.push(new google.maps.LatLng(42, -76.0221));
+    places.push(new google.maps.LatLng(42, -76.01));
+
+
+    //Declare a variable that will hold the InfoWindow object
+    var infowindow;
+
+    //Loop thru the places array
+    for (var i = 0; i < places.length; i++) {
+
+      //Adding the markers
+        var marker = new google.maps.Marker({
+          position: places[i],
+          map: map,
+          title: 'Place number ' + i
+        });
+
+        //Creating the event listener. It now has access to the values of i and marker as they were during its creation
+        (function(i, marker) {
+
+            google.maps.event.addListener(marker, 'click', function() {
+              //Check to see if infowindow - declared a global var - already exists
+              if (!infowindow) {
+                // Create a new InfoWindow object
+                infowindow = new google.maps.InfoWindow();
+              }
+
+              // Setting the conent of the Infowindow
+              infowindow.setContent('Place number ' + i);
+
+              //Tying the InfoWindow to the marker
+              infowindow.open(map, marker);
+
+              });
+
+
+         })(i, marker);
+
+        //Extending the bounds object with each LatLng
+        bounds.extend(places[i]);
+
+      } //end loop
+
+      //Adjusting the map to new bounding box
+      map.fitBounds(bounds);
+
+  }; //end function
+
+})();
+
+
+

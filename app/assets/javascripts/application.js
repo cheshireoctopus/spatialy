@@ -20,7 +20,7 @@
 
     var options = {
       zoom: 3,
-      center: new google.maps.LatLng(-74.0059, 40.7127),
+      center: new google.maps.LatLng(40.7127, -74.0059),
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
@@ -34,9 +34,8 @@
 
     //Push Values to Array 'Cities'
     places.push(new google.maps.LatLng(y_pos, x_pos));
-    places.push(new google.maps.LatLng(42, -76.02));
-    places.push(new google.maps.LatLng(42, -76.0221));
-    places.push(new google.maps.LatLng(42, -76.01));
+    places.push(new google.maps.LatLng(40.7484, -73.9857));
+
 
 
     //Declare a variable that will hold the InfoWindow object

@@ -66,4 +66,10 @@ Spatialy::Application.routes.draw do
   # put /cities/:id          cities#update
   # post /cities/:id          cities#destroy
 
+  #################
+  ### VIEW ROUTES ###
+  #################
+
+  get '/views/index' => 'views#index'
+  get '/admin' => 'views#admin', :as => 'admin'
 end

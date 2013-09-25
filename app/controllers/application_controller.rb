@@ -1,5 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+  def application
+    @builindgs = Building.all
+  end
 
   private
   def current_user

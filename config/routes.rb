@@ -70,8 +70,12 @@ Spatialy::Application.routes.draw do
   ### VIEW ROUTES ###
   #################
 
-  get '/views/index' => 'views#index'
   get '/admin' => 'views#admin', :as => 'admin'
+  get '/views/index' => 'views#index'
+  get '/views/buildings' => 'views#buildings'
+  get '/views/architects' => 'views#architects'
+  get '/views/cities' => 'views#cities'
+
 
   ####################
   ### TWITTER ROUTES ###

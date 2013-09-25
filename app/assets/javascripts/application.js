@@ -30,11 +30,9 @@
     var bounds = new google.maps.LatLngBounds();
 
     //Create Array for Cities
-    var places = [];
+
 
     //Push Values to Array 'Cities'
-    places.push(new google.maps.LatLng(y_pos, x_pos));
-    places.push(new google.maps.LatLng(40.7484, -73.9857));
 
 
 
@@ -42,11 +40,11 @@
     var infowindow;
 
     //Loop thru the places array
-    for (var i = 0; i < places.length; i++) {
+    for (var i = 0; i < $places.length; i++) {
 
       //Adding the markers
         var marker = new google.maps.Marker({
-          position: places[i],
+          position: $places[i],
           map: map,
           title: 'Place number ' + i
         });
@@ -73,7 +71,7 @@
          })(i, marker);
 
         //Extending the bounds object with each LatLng
-        bounds.extend(places[i]);
+        bounds.extend($places[i]);
 
       } //end loop
 

@@ -11,16 +11,28 @@
 
 <script>
 
-  var x_pos = <%= -74.0059 %>
-  var y_pos = <%= 40.7127 %>
-
+  // Create Array for Buildings
+  // var places = [];
+  // var x_pos = <%= -74.0059 %>
+  // var y_pos = <%= 40.7127 %>
+  // //Push Values to Array
+  //  places.push(new google.maps.LatLng(y_pos, x_pos));
+  //  places.push(new google.maps.LatLng(40.7484, -73.9857));
+  // var $places = [];
+    var $places = []
 </script>
+ <% @buildings.each do |building| %>
+      <script>
+      var x = <%= building.x_coord %>
+      var y = <%= building.y_coord %>
+      // var coords = [];
+      $places.push(new google.maps.LatLng(y, x));
+      </script>
+  <% end %>
 
 
 </head>
 <body>
-
-
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>

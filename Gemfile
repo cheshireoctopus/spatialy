@@ -44,3 +44,7 @@ gem 'devise'
 
 # Skip Heroku injection
 gem 'rails_12factor'
+
+#Twitter Auth
+gem 'twitter'
+gem 'omniauth-twitter'

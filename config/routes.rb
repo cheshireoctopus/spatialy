@@ -72,4 +72,12 @@ Spatialy::Application.routes.draw do
 
   get '/views/index' => 'views#index'
   get '/admin' => 'views#admin', :as => 'admin'
+
+  ####################
+  ### TWITTER ROUTES ###
+  ####################
+
+  get '/auth/:provider/callback', :to => "sessions#create"
+  delete '/logout', :to => 'sessions#destroy', :as => 'logout'
+
 end

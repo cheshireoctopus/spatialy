@@ -1,25 +1,36 @@
+<%= link_to "Login via Twitter", "/auth/twitter" %>
 <nav id="topNav">
       <ul>
           <li><a href="#" title="Nav_Cities">Cities</a>
               <ul>
-                  <%= @cities.each do |city| %>
-                  <li><a href="#">- <%= city.name %></a></li>
-                  <% end %>
+
+                  <li><a href="#">All Cities</a></li>
+                  <li><a href="#">Add City</a></li>
+
               </ul>
           </li>
           <li><a href="#" title="Nav_Buildings">Buildings</a>
               <ul>
-                  <%= @buildings.each do |building| %>
-                  <li><a href="#">- <%= building.name %></a></li>
-                  <% end %>
+                  <li><a href="#">Browse Buildings</a></li>
+                  <li><a href="#">Add Building</a></li>
+                  <li><a href="#">Top Ten</a></li>
               </ul>
           </li>
           <li><a href="#" title="Nav_Architects">Architects</a>
               <ul>
-                  <% @architects.each do |architect| %>
-                  <li><a href="#">- <%= architect.name %></a></li>
-                  <% end %>
+                  <li><a href="#">Browse Architects</a></li>
+                  <li><a href="#">Add Architect</a></li>
               </ul>
+          </li>
+          <li><a href="#" tile="Nav_Styles">Styles</a>
+            <ul>
+              <li><a href="#">Browse Styles</a></li>
+            </ul>
+          </li>
+          <li><a href="#" tile="Nav_Users">Profile</a>
+            <ul>
+              <li><a href="#">Login</a></li>
+            </ul>
           </li>
       </ul>
 </nav>

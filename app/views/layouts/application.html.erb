@@ -11,77 +11,19 @@
 
 <script>
 
-  var x_pos = <%= -73.9400 %>
-  var y_pos = <%= 40.6700 %>
+  var x_pos = <%= -74.0059 %>
+  var y_pos = <%= 40.7127 %>
 
 </script>
 
 
 </head>
-<body class="no-js">
+<body>
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <script>
-        var el = document.getElementsByTagName("body")[0];
-        el.className = "";
-    </script>
-
-    <nav id="topNav">
-        <ul>
-            <li><a href="#" title="Nav_Cities">Cities</a>
-                <ul>
-                    <li><a href="#" title="Sub_Cities_1">Sub Cities 1</a></li>
-                    <li><a href="#" title="Sub_Cities_2">Sub Cities 2</a></li>
-                    <li class="last"><a href="#" title="Sub_Cities_3">Sub Cities 3</a></li>
-                </ul>
-            </li>
-            <li><a href="#" title="Nav_Buildings">Buildings</a>
-                <ul>
-                    <li><a href="#" title="Sub_Buildings_1">Sub Buildings 1</a></li>
-                    <li><a href="#" title="Sub_Buildings_2">Sub Buildings 2</a></li>
-                    <li class="last"><a href="#" title="Sub_Buildings_3">Sub Buildings 3</a></li>
-                </ul>
-            </li>
-            <li><a href="#" title="Nav_Architects">Architects</a>
-                <ul>
-                    <li><a href="#" title="Sub_Architects_1">Sub Architects 1</a></li>
-                    <li><a href="#" title="Sub_Architects_2">Sub Architects 2</a></li>
-                    <li class="last"><a href="#" title="Sub_Architects_3">Sub Architects 3</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-
-        <script>
-      (function($){
-
-        //cache nav
-        var nav = $("#topNav");
-
-        //add indicator and hovers to submenu parents
-        nav.find("li").each(function() {
-          if ($(this).find("ul").length > 0) {
-            $("<span>").text("^").appendTo($(this).children(":first"));
-
-            //show subnav on hover
-            $(this).mouseenter(function() {
-              $(this).find("ul").stop(true, true).slideDown();
-            });
-
-            //hide submenus on exit
-            $(this).mouseleave(function() {
-              $(this).find("ul").stop(true, true).slideUp();
-            });
-          }
-        });
-      })(jQuery);
-    </script>
-
     <%= yield %>
-
-    <div id="map"></map>
 
 </body>
 </html>

@@ -11,14 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130924005638) do
+ActiveRecord::Schema.define(:version => 20130925014522) do
 
   create_table "architects", :force => true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.string   "mid_name"
+    t.string   "name"
   end
 
   create_table "architects_buildings", :id => false, :force => true do |t|

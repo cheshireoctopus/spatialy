@@ -1,0 +1,46 @@
+#show_building_main {
+  width: 65%;
+  height: 600px;
+  margin: 0 auto;
+  background: white;
+  margin-top: 0px;
+  padding-top: 3%;
+  overflow: scroll;
+}
+
+
+
+img {
+  border: 3px solid black;
+    width:40%;
+   float: left;
+  margin-left: 5%;
+  margin-right: 5%
+}
+
+#build_map {
+  width: 40%;
+  height: 40%;
+  border: 3px solid black;
+}
+
+#building_stats {
+  font-family: inconsolata;
+  list-style-type: none;
+}
+
+#building_stats ul {
+  list-style-type: none;
+  font-size: 20px;
+}
+
+#building_stats a {
+  text-decoration: none;
+  background:white;
+  color: black;
+}
+
+#building_stats a:hover {
+  color:white;
+  background: black;
+}

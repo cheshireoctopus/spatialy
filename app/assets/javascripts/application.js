@@ -29,13 +29,6 @@
     // Create a LatLngBounds object
     var bounds = new google.maps.LatLngBounds();
 
-    //Create Array for Cities
-
-
-    //Push Values to Array 'Cities'
-
-
-
     //Declare a variable that will hold the InfoWindow object
     var infowindow;
 
@@ -46,7 +39,6 @@
         var marker = new google.maps.Marker({
           position: $places[i],
           map: map,
-          title: 'Place number ' + i
         });
 
         //Creating the event listener. It now has access to the values of i and marker as they were during its creation

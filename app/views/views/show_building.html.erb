@@ -1,0 +1,61 @@
+<script>
+(function() {
+  window.onload = function() {
+    var x = <%= @building.x_coord %>;
+    var y = <%= @building.y_coord %>;
+    var options = {
+      zoom: 15,
+      center: new google.maps.LatLng(y, x),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    var map = new google.maps.Map(document.getElementById('build_map'), options);
+
+    //ADD MARKER
+    var marker = new google.maps.Marker({
+      position: new google.maps.LatLng(y, x),
+      map: map,
+      title: '<%= @building.name %>', //Adds a tooltip
+      icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/green/blank.png' //Change Icon look
+      //leave marker = blank, and 99 to any #
+    });
+
+    // Add Info0Windows
+    var infowindow = new google.maps.InfoWindow({
+      content: '<div class="info"><%= @building.name %></div>'
+    });
+
+    //Add a click event to the marker
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.open(map, marker);
+    });
+  };
+})();
+</script>
+
+
+<div id="show_building_main">
+
+
+  <img src="<%= @building.img %>" >
+
+
+  <div id="build_map">
+
+  </div>
+
+
+  <div id="building_stats">
+    <ul>
+      <h2><u><%= @building.name %></u></h2>
+      <li>Style: <%= @building.style %></li>
+      <li>Street: <%= @building.street %></li>
+      <li>Height: <%= @building.height %></li>
+      <li>Floors: <%= @building.floors %></li>
+      <li><%= link_to 'Back', show_build_path %></li>
+      <li><a href="/users/<%= current_user.id %>/add/<%= @building.id %>">Add to favorites</a></li>
+    </ul>
+  </div>
+
+
+</div>

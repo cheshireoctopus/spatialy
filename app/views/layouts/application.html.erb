@@ -53,7 +53,7 @@
           <li id="nav_six"><a href=""><%= current_user.username %></a>
             <ul>
               <li><a href="/users/<%= current_user.id %>">Profile</a></li>
-              <li><a href="#">Favorites</a></li>
+              <li><a href="/users/<%= current_user.id %>/favorites">Favorites</a></li>
               <li><%= link_to "Log out", logout_path, method: :delete %></li>
             </ul>
           </li>

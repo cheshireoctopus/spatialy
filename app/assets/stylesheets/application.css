@@ -13,7 +13,7 @@
  */
 
  html{
-  background: url('/assets/spatialybackground.jpg');
+  background: url('/assets/spatialybackground.jpg') fixed;
   background-size: cover;
  }
 
@@ -34,12 +34,14 @@ header {
   width: 75%;
   margin: 0 auto;
   text-align: center;
-  letter-spacing: 25px;
+  letter-spacing: 20px;
 }
 
 header a {
   text-decoration: none;
-  color: white;
+  color: #555;
+  -webkit-text-stroke: 2px white;
+  font-size: 250%;
 }
 
 /* base nav styles */

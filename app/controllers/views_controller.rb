@@ -12,6 +12,10 @@ class ViewsController < ApplicationController
     @architects = Architect.all
   end
 
+  def show_building
+    @building = Building.find(params[:id])
+  end
+
   def buildings
     @buildings = Building.all
   end

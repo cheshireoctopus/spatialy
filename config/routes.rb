@@ -66,6 +66,9 @@ Spatialy::Application.routes.draw do
   ### USER ROUTES ###
   #################
 
+  get '/users/:id/favorites' => 'users#favorites'
+  get '/users/:id/add/:building_id' => 'users#add'
+
   resources :users
   # get /users             users#index
   # post /users              users#create
@@ -74,16 +77,16 @@ Spatialy::Application.routes.draw do
   # get /users/:id          users#show
   # put /users/:id          users#update
   # post /users/:id          users#destroy
-
   #################
   ### VIEW ROUTES ###
   #################
 
   get '/admin' => 'views#admin', :as => 'admin'
   get '/views/index' => 'views#index'
-  get '/views/buildings' => 'views#buildings'
+  get '/views/buildings' => 'views#buildings', :as => 'show_build'
   get '/views/architects' => 'views#architects'
   get '/views/cities' => 'views#cities'
+  get '/views/show_building/:id' => 'views#show_building'
 
   ####################
   ### TWITTER ROUTES ###
@@ -97,6 +100,6 @@ Spatialy::Application.routes.draw do
  ### 404 ROUTE ###
  ################
 
-  match "*path", :to => "application#routing_error"
+  # match "*path", :to => "application#routing_error"
 
 end

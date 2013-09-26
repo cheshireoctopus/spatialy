@@ -19,7 +19,7 @@
   window.onload = function () {
 
     var options = {
-      zoom: 3,
+      zoom: 12,
       center: new google.maps.LatLng(40.7127, -74.0059),
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
@@ -63,12 +63,62 @@
          })(i, marker);
 
         //Extending the bounds object with each LatLng
-        bounds.extend($places[i]);
+        //bounds.extend($places[i]);
 
       } //end loop
 
       //Adjusting the map to new bounding box
-      map.fitBounds(bounds);
+      //map.fitBounds(bounds);
+
+
+
+
+      //CHANGE LOCATION
+       document.getElementById('changeNY').onclick = function () {
+            // map.setCenter(new google.maps.LatLng(40.6891, -74.0445));
+            // map.setZoom(17);
+            // map.setMapTypeId(google.maps.MapTypeId.SATELLITE);
+            map.setOptions({
+                center: new google.maps.LatLng(40.7127, -74.0059),
+                zoom: 12,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+          };
+
+       document.getElementById('changeLA').onclick = function () {
+            // map.setCenter(new google.maps.LatLng(40.6891, -74.0445));
+            // map.setZoom(17);
+            // map.setMapTypeId(google.maps.MapTypeId.SATELLITE);
+            map.setOptions({
+                center: new google.maps.LatLng(34.0536, -118.243),
+                zoom: 10,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+          };
+
+       document.getElementById('changeSF').onclick = function () {
+            // map.setCenter(new google.maps.LatLng(40.6891, -74.0445));
+            // map.setZoom(17);
+            // map.setMapTypeId(google.maps.MapTypeId.SATELLITE);
+            map.setOptions({
+                center: new google.maps.LatLng(37.7792, -122.4191),
+                zoom: 12,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+          };
+
+       document.getElementById('changeChicago').onclick = function () {
+            // map.setCenter(new google.maps.LatLng(40.6891, -74.0445));
+            // map.setZoom(17);
+            // map.setMapTypeId(google.maps.MapTypeId.SATELLITE);
+            map.setOptions({
+                center: new google.maps.LatLng(41.8839, -87.6316),
+                zoom: 10,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+          };
+
+      //END CHANGE LOCATION
 
   }; //end function
 

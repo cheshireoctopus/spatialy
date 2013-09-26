@@ -2,17 +2,16 @@
 
     <% x = 1 %>
     <% @buildings.each do |building| %>
-
+        <a href="/views/show_building/<%= building.id %>" >
 
           <div class="building_card" style="background:url(<%= building.img %>);">
-            <a href="/views/show_building/<%= building.id %>" >
 
             <h2>
                 <%= building.name %>
             </h2>
-            </a>
-          </div>
 
+          </div>
+        </a>
 
         <% if x%4 == 0 %>
             <div class="clear"></div>

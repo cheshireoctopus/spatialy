@@ -1,7 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   def application
-    @builindgs = Building.all
   end
 
   def twitter_client(user)

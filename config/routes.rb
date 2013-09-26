@@ -100,6 +100,6 @@ Spatialy::Application.routes.draw do
  ### 404 ROUTE ###
  ################
 
-  # match "*path", :to => "application#routing_error"
+  match "*path", :to => "application#routing_error"
 
 end

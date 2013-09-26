@@ -13,26 +13,43 @@
  */
 
  html{
-  background: url(http://awesomewallpaper.files.wordpress.com/2012/05/02832_newyorkcitybw_1920x1080.jpg);
+  background: url('/assets/spatialybackground.jpg');
   background-size: cover;
  }
 
 body{
-  font-family: inconsolata;
+  font-family: Tahoma;
 }
 
 #map {
-  width: 50%;
+  width: 65%;
   height: 650px;
   border: 1px solid black;
   margin: 0 auto;
+  margin-top: -26px;
+}
+
+header {
+  color: white;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+  letter-spacing: 25px;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
 }
 
 /* base nav styles */
-nav { display:block; width: 75%; margin:0 auto 20px; border:1px solid #222; position:relative; background-color:#6a6a6a; font:16px Tahoma, Sans-serif; z-index: 1000;}
+nav { display:block; width: 65%; margin:0 auto 20px; border:1px solid #222; position:relative; background-color:#6a6a6a; font:16px Tahoma, Sans-serif; z-index: 1000;}
 nav ul { padding:0; margin:0;}
 nav ul li {width:20%;} /* added this shit*/
 nav ul ul li {width:100%;}
+#nav_one {width:17%;}
+#nav_five {width:23%;}
+#nav_six {width:20%;}
 nav li { position:relative; float:left; list-style-type:none;}
 nav ul:after { content:"."; display:block; height:0; clear:both; visibility:hidden; }
 nav li a { display:block; padding:10px 20px; border-left:1px solid #999; border-right:1px solid #222; color:#eee; text-decoration:none; }
@@ -44,6 +61,9 @@ nav ul ul { display:none; width:100%; position:absolute; left:0; background:#6a6
 nav ul ul li { float:none; }
 nav ul ul a { padding:5px 10px; border-left:none; border-right:none; font-size:14px;}
 nav ul ul a:hover { background-color:#555; }
+
+
+
 
 
 

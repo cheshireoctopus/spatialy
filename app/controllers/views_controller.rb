@@ -9,12 +9,15 @@ class ViewsController < ApplicationController
   end
 
   def architects
+    @architects = Architect.all
   end
 
   def buildings
+    @buildings = Building.all
   end
 
   def cities
+    @cities = City.all
   end
 
 end

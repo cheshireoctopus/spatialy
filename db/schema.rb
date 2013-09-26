@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130925044225) do
+ActiveRecord::Schema.define(:version => 20130925191528) do
 
   create_table "architects", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -72,8 +72,5 @@ ActiveRecord::Schema.define(:version => 20130925044225) do
     t.string   "oauth_token"
     t.string   "oauth_secret"
   end
-
-  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
-  add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
 end

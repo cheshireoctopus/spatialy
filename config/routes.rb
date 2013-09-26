@@ -1,7 +1,5 @@
 Spatialy::Application.routes.draw do
 
-  devise_for :users
-
   root :to => 'views#index', :as => 'home'
 
   #######################
@@ -44,8 +42,6 @@ Spatialy::Application.routes.draw do
   # put /buildings/:id          buildings#update
   # post /buildings/:id          buildings#destroy
 
-
-
   #################
   ### CITY ROUTES ###
   #################
@@ -67,6 +63,19 @@ Spatialy::Application.routes.draw do
   # post /cities/:id          cities#destroy
 
   #################
+  ### USER ROUTES ###
+  #################
+
+  resources :users
+  # get /users             users#index
+  # post /users              users#create
+  # get /users/new          users#new
+  # get /users/:id/edit     users#edit
+  # get /users/:id          users#show
+  # put /users/:id          users#update
+  # post /users/:id          users#destroy
+
+  #################
   ### VIEW ROUTES ###
   #################
 
@@ -76,12 +85,18 @@ Spatialy::Application.routes.draw do
   get '/views/architects' => 'views#architects'
   get '/views/cities' => 'views#cities'
 
-
   ####################
   ### TWITTER ROUTES ###
   ####################
 
+  get '/sessions/create', :to => 'sessions#create'
   get '/auth/:provider/callback', :to => "sessions#create"
   delete '/logout', :to => 'sessions#destroy', :as => 'logout'
+
+ ################
+ ### 404 ROUTE ###
+ ################
+
+  match "*path", :to => "application#routing_error"
 
 end

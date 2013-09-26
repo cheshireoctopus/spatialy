@@ -1,41 +1,92 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Spatialy</title>
+  <title>Spatia.ly</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeyfhHl0iRpNE1mpYM1O741wt6oe3xhdA&sensor=false"></script>
-
-
-<script>
-
-  // Create Array for Buildings
-  // var places = [];
-  // var x_pos = <%= -74.0059 %>
-  // var y_pos = <%= 40.7127 %>
-  // //Push Values to Array
-  //  places.push(new google.maps.LatLng(y_pos, x_pos));
-  //  places.push(new google.maps.LatLng(40.7484, -73.9857));
-  // var $places = [];
-    var $places = []
-</script>
- <% @buildings.each do |building| %>
-      <script>
-      var x = <%= building.x_coord %>
-      var y = <%= building.y_coord %>
-      // var coords = [];
-      $places.push(new google.maps.LatLng(y, x));
-      </script>
-  <% end %>
-
-
 </head>
 <body>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <header>
+      <h1><%= link_to 'spatia.ly', home_path %></h1>
+    </header>
+
+    <!-- <p><%= notice %></p> -->
+
+    <nav id="topNav">
+      <ul>
+        <% if current_user %>
+          <li id="nav_two"><% else %><li id="nav_one"><% end %><a href="/views/cities" title="Nav_Cities">Cities</a>
+              <ul>
+
+                  <li><a href="#">All Cities</a></li>
+                  <li><a href="#">San Francisco</a></li>
+                  <li><a href="#">Los Angeles</a></li>
+                  <li><a href="#">Chicago</a></li>
+                  <li><a href="#">Add City</a></li>
+
+              </ul>
+          </li>
+          <li id="nav_two"><a href="/views/buildings" title="Nav_Buildings">Buildings</a>
+              <ul>
+                  <li><a href="/views/buildings">Browse Buildings</a></li>
+                  <li><a href="#">Top Ten</a></li>
+                  <li><a href="#">Add Building</a></li>
+              </ul>
+          </li>
+          <li id="nave_three"><a href="/views/architects" title="Nav_Architects">Architects</a>
+              <ul>
+                  <li><a href="/views/architects">Browse Architects</a></li>
+                  <li><a href="#">Add Architect</a></li>
+              </ul>
+          </li>
+          <li id="nav_four"><a href="/views/styles" tile="Nav_Styles">Styles</a>
+            <ul>
+              <li><a href="/views/cities">Browse Styles</a></li>
+            </ul>
+          </li>
+
+          <% if current_user %>
+          <li id="nav_six"><a href=""><%= current_user.username %></a>
+            <ul>
+              <li><a href="/users/<%= current_user.id %>">Profile</a></li>
+              <li><a href="#">Favorites</a></li>
+              <li><%= link_to "Log out", logout_path, method: :delete %></li>
+            </ul>
+          </li>
+          <% else %>
+            <li id="nav_five"><%= link_to "Log in with Twitter", '/auth/twitter' %></li>
+          <% end %>
+      </ul>
+</nav>
+
+<script>
+ (function($){
+
+        //cache nav
+        var nav = $("#topNav");
+
+        //add indicator and hovers to submenu parents
+        nav.find("li").each(function() {
+          if ($(this).find("ul").length > 0) {
+            $("<span>").text("^").appendTo($(this).children(":first"));
+
+            //show subnav on hover
+            $(this).mouseenter(function() {
+              $(this).find("ul").stop(true, true).slideDown();
+            });
+
+            //hide submenus on exit
+            $(this).mouseleave(function() {
+              $(this).find("ul").stop(true, true).slideUp();
+            });
+          }
+        });
+      })(jQuery);
+</script>
 
     <%= yield %>
 

@@ -17,7 +17,10 @@ class UsersController < ApplicationController
 
   def favorites
     user = current_user
-    @buildings = user.buildings.map {|hash| hash['name']}
+    @buildings = user.buildings.map {|hash| hash}
+  end
+
+  def destroy
   end
 
 end

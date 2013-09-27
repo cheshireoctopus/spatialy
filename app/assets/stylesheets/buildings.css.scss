@@ -13,16 +13,19 @@
   height: 400px;
   float:left;
   margin: 5px;
-  color: black;
-  border: 4px solid black;
+  border: 4px solid #FA5858;
 }
 
-.building_card h2 {
-  font-family: inconsolata;
+.building_card p {
+  font-family: Helvetica;
   text-align: center;
+  font-size:16px;
+  font-weight: lighter;
   color: white;
-  background: black;
+  background: #FA5858;
   margin-top:0px;
+  padding-top: 2px;
+  padding-bottom: 5px;
 }
 
 .clear {

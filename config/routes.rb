@@ -68,6 +68,7 @@ Spatialy::Application.routes.draw do
 
   get '/users/:id/favorites' => 'users#favorites'
   get '/users/:id/add/:building_id' => 'users#add'
+  delete '/users/:id/destroy/:building_id' => 'users#destroy'
 
   resources :users
   # get /users             users#index

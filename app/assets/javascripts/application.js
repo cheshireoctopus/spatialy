@@ -173,6 +173,7 @@
             });
           };
 
+
       //END CHANGE LOCATION
 
   }; //end function

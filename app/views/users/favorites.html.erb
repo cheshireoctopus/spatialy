@@ -1,3 +1,22 @@
-<% @buildings.each do |name| %>
-  <p><%= name %></p>
-<% end %>
+<div id="buildings_main">
+
+    <% x = 1 %>
+    <% @buildings.each do |data| %>
+        <a href="/views/show_building/<%= data['id'] %>" >
+
+          <div class="building_card" style="background:url(<%= data['img'] %>);">
+
+            <p>
+                <%= data['name'] %>
+            </p>
+
+          </div>
+        </a>
+        <% if x%4 == 0 %>
+            <div class="clear"></div>
+        <% end %>
+        <% x+=1 %>
+
+    <% end %>
+
+</div>

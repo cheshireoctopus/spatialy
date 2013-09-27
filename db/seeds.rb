@@ -20,6 +20,11 @@ building5 = Building.create(name: "One Madison Park", style: "Contemporary", hei
 building6 = Building.create(name: "Flatiron Building", style: "Renaissnace", height: 285, floors: 22, street: "175 Fifth Avenue", y_coord: 40.741111, x_coord: -73.989722, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Edificio_Fuller_%28Flatiron%29_en_2010_desde_el_Empire_State_crop_boxin.jpg/253px-Edificio_Fuller_%28Flatiron%29_en_2010_desde_el_Empire_State_crop_boxin.jpg')
 building7 = Building.create(name: "Met Life Tower", style: "Italian Renaissnace Revival", height: 700, floors: 50, street: "1 Madison Avenue", y_coord: 40.74124, x_coord: -73.9874, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Met_Life_Tower_from_below.jpg/360px-Met_Life_Tower_from_below.jpg')
 building8 = Building.create(name: "The Hearst Tower", style: "Contemporary", height: 597, floors: 46, street: "300 West 57 Street", y_coord: 40.766729, x_coord: -73.983564, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Hearstowernyc.JPG/320px-Hearstowernyc.JPG')
+building9 = Building.create(name: "The Chrysler Building", style: "Art Deco", height: 1046, floors: 77, street: "405 Lexington Avenue", y_coord: 40.7517, x_coord: -73.9753, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Chrysler_Building_2005_3.jpg/320px-Chrysler_Building_2005_3.jpg')
+building10 = Building.create(name: "GE Building", style: "Art Deco", height: 850, floors: 70, street: "30 Rockefeller Center", y_coord: 40.759, x_coord: -73.979, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/GE_Building.jpg/360px-GE_Building.jpg')
+building11 = Building.create(name: "One World Trade Center", style: "Contemporary", height: 1776, floors: 104, street: "72 Vesey Street", y_coord: 40.713, x_coord: -74.0135, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/OneWorldTradeCenter.jpg/318px-OneWorldTradeCenter.jpg')
+building12 = Building.create(name: "American Standard Building", style: "Gothic Art Deco", height: 338, floors: 23, street: "40 West 40th Street", y_coord: 40.7530, x_coord: -73.9840, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/NYC_-_American_Radiator_Building.jpg/320px-NYC_-_American_Radiator_Building.jpg')
+
 
 
 

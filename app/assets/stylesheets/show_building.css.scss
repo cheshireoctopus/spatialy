@@ -2,7 +2,7 @@
   width: 65%;
   height: 600px;
   margin: 0 auto;
-  background: white;
+  background: black;
   margin-top: 0px;
   padding-top: 3%;
   overflow: scroll;
@@ -25,8 +25,9 @@ img {
 }
 
 #building_stats {
-  font-family: inconsolata;
+  font-family: futura;
   list-style-type: none;
+  color: white;
 }
 
 #building_stats ul {

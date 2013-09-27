@@ -39,13 +39,18 @@ header {
 
 header a {
   text-decoration: none;
-  color: black;
+  color: #FA5858;
   -webkit-text-stroke: 2px white;
   font-size: 250%;
+  transition: all .3s ease;
+}
+
+header a:hover {
+  -webkit-text-stroke: 3px white;
 }
 
 /* base nav styles */
-nav { display:block; width: 65%; margin:0 auto 20px; border:1px solid #222; position:relative; background-color:black; font:16px Tahoma, Sans-serif; z-index: 1000;}
+nav { display:block; width: 65%; margin:0 auto 20px; border:1px solid #222; position:relative; background-color:#FA5858; font:16px Tahoma, Sans-serif; z-index: 1000;}
 nav ul { padding:0; margin:0;}
 nav ul li {width:20%;} /* added this shit*/
 nav ul ul li {width:100%;}

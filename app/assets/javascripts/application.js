@@ -113,7 +113,62 @@
             // map.setMapTypeId(google.maps.MapTypeId.SATELLITE);
             map.setOptions({
                 center: new google.maps.LatLng(41.8839, -87.6316),
-                zoom: 10,
+                zoom: 11,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+          };
+
+          document.getElementById('changeMoscow').onclick = function () {
+            // map.setCenter(new google.maps.LatLng(40.6891, -74.0445));
+            // map.setZoom(17);
+            // map.setMapTypeId(google.maps.MapTypeId.SATELLITE);
+            map.setOptions({
+                center: new google.maps.LatLng(55.7500, 37.6167),
+                zoom: 11,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+          };
+
+          document.getElementById('changeLondon').onclick = function () {
+            // map.setCenter(new google.maps.LatLng(40.6891, -74.0445));
+            // map.setZoom(17);
+            // map.setMapTypeId(google.maps.MapTypeId.SATELLITE);
+            map.setOptions({
+                center: new google.maps.LatLng(51.5072, -0.1275),
+                zoom: 11,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+          };
+
+           document.getElementById('changeParis').onclick = function () {
+            // map.setCenter(new google.maps.LatLng(40.6891, -74.0445));
+            // map.setZoom(17);
+            // map.setMapTypeId(google.maps.MapTypeId.SATELLITE);
+            map.setOptions({
+                center: new google.maps.LatLng(48.8567, 2.3508),
+                zoom: 11,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+          };
+
+           document.getElementById('changeTokyo').onclick = function () {
+            // map.setCenter(new google.maps.LatLng(40.6891, -74.0445));
+            // map.setZoom(17);
+            // map.setMapTypeId(google.maps.MapTypeId.SATELLITE);
+            map.setOptions({
+                center: new google.maps.LatLng(35.6895, 139.6917),
+                zoom: 11,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+          };
+
+          document.getElementById('changeShanghai').onclick = function () {
+            // map.setCenter(new google.maps.LatLng(40.6891, -74.0445));
+            // map.setZoom(17);
+            // map.setMapTypeId(google.maps.MapTypeId.SATELLITE);
+            map.setOptions({
+                center: new google.maps.LatLng(31.2000, 121.5000),
+                zoom: 11,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             });
           };

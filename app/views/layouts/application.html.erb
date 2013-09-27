@@ -22,25 +22,33 @@
           <li id="nav_two"><% else %><li id="nav_one"><% end %><a href="/views/cities" title="Nav_Cities">Cities</a>
               <ul>
 
-                  <li><a href="#">All Cities</a></li>
-                  <li><a href="#" id="changeNY">New York</a></li>
-                  <li><a href="#" id="changeSF">San Francisco</a></li>
-                  <li><a href="#" id="changeLA">Los Angeles</a></li>
-                  <li><a href="#" id="changeChicago">Chicago</a></li>
-                  <li><a href="#">Add City</a></li>
-
+                  <li><a href="">All Cities</a></li>
+                  <li><a href="" id="changeChicago">Chicago</a></li>
+                  <li><a href="" id="changeLondon">London</a></li>
+                  <li><a href="" id="changeLA">Los Angeles</a></li>
+                  <li><a href="" id="changeMoscow">Moscow</a></li>
+                  <li><a href="" id="changeNY">New York</a></li>
+                  <li><a href="" id="changeParis">Paris</a></li>
+                  <li><a href="" id="changeSF">San Francisco</a></li>
+                  <li><a href="" id="changeShanghai">Shanghai</a></li>
+                  <li><a href="" id="changeTokyo">Tokyo</a></li>
               </ul>
           </li>
           <li id="nav_two"><a href="/views/buildings" title="Nav_Buildings">Buildings</a>
               <ul>
                   <li><a href="/views/buildings">Browse Buildings</a></li>
-                  <li><a href="#">Top Ten</a></li>
-                  <li><a href="#">Add Building</a></li>
+                  <li><a href="">Top Ten</a></li>
+                  <% get_buildings.each do |building| %>
+                  <li><a href="/views/show_building/<%= building.id %>"><%= building.name %></a></li>
+                  <% end %>
               </ul>
           </li>
           <li id="nave_three"><a href="/views/architects" title="Nav_Architects">Architects</a>
               <ul>
                   <li><a href="/views/architects">Browse Architects</a></li>
+                  <% get_architects.each do |architect| %>
+                  <li><a href="#"><%= architect.name %></a></li>
+                  <% end %>
                   <li><a href="#">Add Architect</a></li>
               </ul>
           </li>
@@ -90,6 +98,7 @@
 </script>
 
     <%= yield %>
+
 
 </body>
 </html>

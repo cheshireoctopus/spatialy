@@ -86,7 +86,9 @@ Spatialy::Application.routes.draw do
   get '/views/buildings' => 'views#buildings', :as => 'show_build'
   get '/views/architects' => 'views#architects'
   get '/views/cities' => 'views#cities'
+  get '/views/show_building/' => 'views#show_building'
   get '/views/show_building/:id' => 'views#show_building'
+  get '/views/allcities' => 'views#allcities'
 
   ####################
   ### TWITTER ROUTES ###

@@ -11,6 +11,7 @@ class UsersController < ApplicationController
     user = User.find(id)
     building = Building.find(params[:building_id])
     user.buildings << building
+
     redirect_to "/users/#{id}/favorites"
   end
 

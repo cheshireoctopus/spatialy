@@ -53,7 +53,9 @@
       <li>Height: <%= @building.height %></li>
       <li>Floors: <%= @building.floors %></li>
       <li><%= link_to 'Back', show_build_path %></li>
-      <li><a href="/users/<%= current_user.id %>/add/<%= @building.id %>">Add to favorites</a></li>
+      <% if current_user %>
+        <li><a href="/users/<%= current_user.id %>/add/<%= @building.id %>">Add to favorites</a></li>
+      <% end %>
     </ul>
   </div>
 

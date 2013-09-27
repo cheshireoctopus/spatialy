@@ -8,6 +8,9 @@ class ViewsController < ApplicationController
   def admin
   end
 
+  def allcities
+  end
+
   def architects
     @architects = Architect.all
   end

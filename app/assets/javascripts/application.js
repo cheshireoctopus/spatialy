@@ -51,8 +51,14 @@
                 infowindow = new google.maps.InfoWindow();
               }
 
+              //Generate Content
+              var content = '<div id="info">' +
+               '<img src="http://placekitten.com/800/600"/>' +
+              '<h1>hehe nawt werkin 4 u</h1>' +
+              '</div>';
+
               // Setting the conent of the Infowindow
-              infowindow.setContent('Place number ' + i);
+              infowindow.setContent(content);
 
               //Tying the InfoWindow to the marker
               infowindow.open(map, marker);
@@ -70,10 +76,18 @@
       //Adjusting the map to new bounding box
       //map.fitBounds(bounds);
 
-
-
-
       //CHANGE LOCATION
+      document.getElementById('changeBrooklyn').onclick = function () {
+            // map.setCenter(new google.maps.LatLng(40.6891, -74.0445));
+            // map.setZoom(17);
+            // map.setMapTypeId(google.maps.MapTypeId.SATELLITE);
+            map.setOptions({
+                center: new google.maps.LatLng(40.8000, -73.4000),
+                zoom: 10,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+          };
+
        document.getElementById('changeNY').onclick = function () {
             // map.setCenter(new google.maps.LatLng(40.6891, -74.0445));
             // map.setZoom(17);

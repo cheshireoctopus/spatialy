@@ -3,8 +3,8 @@
 </script>
  <% @buildings.each do |building| %>
       <script>
-      var x = <%= building.x_coord %>
-      var y = <%= building.y_coord %>
+      var x = <%= building.x_coord %>;
+      var y = <%= building.y_coord %>;
       // var coords = [];
       $places.push(new google.maps.LatLng(y, x));
       </script>

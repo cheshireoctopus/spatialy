@@ -52,9 +52,9 @@
               }
 
               //Generate Content
-              var content = '<div id="info">' +
-               '<img src="http://placekitten.com/800/600"/>' +
-              '<h1>hehe nawt werkin 4 u</h1>' +
+              var content = '<div id="info">'+
+               '<img src="http://placekitten.com/800/600"/>'+
+              '<h1>hehe nawt werkin 4 u</h1>'+
               '</div>';
 
               // Setting the conent of the Infowindow

@@ -5,6 +5,9 @@ class ViewsController < ApplicationController
     @architects = Architect.all
   end
 
+  def about
+  end
+
   def admin
   end
 

@@ -4,14 +4,11 @@ A simple CRUD app for architecture aficionados to discover buildings in your cit
 
 Created over four days at General Assembly, Web Development Intensive.
 
-Check it out @ https://spatially.herokuapp.com 
+Check it out @ https://spatially.herokuapp.com
 
 
 =Built With:
-
+* HTML5/CSS3
 * Ruby on Rails
 * PostgreSQL
 * Just enough JavaScript to run Google Maps API
-
-
-
